@@ -1,0 +1,22 @@
+<h2></h2>
+<div *ngIf="users.length > 0">
+  <div>
+    <button (click)="refreshUsers()">Atualizar Lista</button>
+  </div>
+
+  <ul>
+    <li *ngFor="let user of users">
+      {{ user.name }} - {{ user.email }}
+    </li>
+  </ul>
+
+  <ul>
+    <li *ngFor="let user of users">
+      <strong>Nome:</strong> {{ user.name }} |
+      <strong>E-mail:</strong> {{ user.email }}
+    </li>
+  </ul>
+</div>
+<div *ngIf="users.length === 0">
+  <p>Não há usuários cadastrados.</p>
+</div>

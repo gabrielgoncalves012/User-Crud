@@ -1,0 +1,120 @@
+/* Remove margens e espaçamentos globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+/* Header estilizado */
+header {
+  background-color: rgba(0, 0, 0, 0.781);
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0; /* Garante que o header começa no início da tela */
+  width: 100%; /* O header ocupa toda a largura da tela */
+  z-index: 1000;
+}
+
+/* Estilização para o container */
+.container {
+  display: flex;
+  justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+  align-items: center;
+  flex-direction: column;
+  margin-top: 60px; /* Ajuste fino para posicionar abaixo do header */
+ margin-right:  90px ;
+
+}
+
+/* Inputs e botões lado a lado */
+form {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaço entre os elementos */
+}
+
+form .form-group {
+  display: flex;
+  flex-direction: row; /* Coloca label e input lado a lado */
+  align-items: center; /* Alinha verticalmente */
+  gap: 10px; /* Espaço entre label e input */
+}
+
+form .form-group label {
+  font-size: 14px;
+  margin-bottom: 0; /* Remove margem inferior */
+}
+
+form .btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Estilização adicional para inputs */
+input {
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+/* Estilização adicional para botões */
+button {
+  border: none;
+  border-radius: 5px;
+  font-size: 17px;
+}
+/* Lista de usuários */
+.user-list {
+  margin-top: 30px;
+  width: 86%;
+  margin-left: 20px;
+
+}
+
+.user-list h3 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.user-list ul {
+  list-style-type: none;
+  padding: 0;
+  transition: all 0.5s;
+
+
+}
+ li{
+  transition: all 0.3s;
+}
+ li:hover{
+  -webkit-transform: scale(1.02);
+    transform: scale(1.02)
+
+}
+
+.user-list li {
+  background: white;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.726);
+
+}
+h3{
+  background-color: #007bff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: beige;
+}
+

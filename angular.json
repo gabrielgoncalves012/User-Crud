@@ -36,6 +36,9 @@
               "entry": "src/server.ts"
             }
           },
+
+         
+
           "configurations": {
             "production": {
               "budgets": [
@@ -97,5 +100,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

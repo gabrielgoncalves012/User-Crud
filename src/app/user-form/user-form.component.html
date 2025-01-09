@@ -1,0 +1,36 @@
+<nav>
+  <header>
+    <h1>Cadastro de Usuário</h1>
+  </header>
+</nav>
+
+<div class="container">
+  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+    <div class="form-group">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" class="form-control" name="name" ngModel required />
+    </div>
+
+    <div class="form-group">
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" class="form-control" name="email" ngModel required />
+    </div>
+
+    <div class="form-group">
+      <label for="password" id="senha">Senha:</label>
+      <input type="password" id="password" class="form-control" name="password" ngModel required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+  </form>
+
+  <div class="user-list" *ngIf="users.length > 0">
+    <h3>Usuários Cadastrados</h3>
+    <ul>
+      <li *ngFor="let user of users">
+        <strong>Nome:</strong> {{ user.name }} |
+        <strong>E-mail:</strong> {{ user.email }}
+      </li>
+    </ul>
+  </div>
+</div>
